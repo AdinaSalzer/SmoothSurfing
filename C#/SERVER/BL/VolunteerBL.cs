@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace BL
 {
     public class VolunteerBL
-    {
+    {//try git
         public static void AddVolunteer(VolunteerDTO volunteer)
         {
         using (SmoothsurfingEntities db = new SmoothsurfingEntities())

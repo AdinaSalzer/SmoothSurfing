@@ -13,6 +13,8 @@ namespace API.Controllers
     [RoutePrefix("api/KeyWord")]
     public class TbKeyWordController : ApiController
     {
+        public IEnumerable<object> SmoothSurfing { get; private set; }
+
         [Route("getKeyWordId")]
         [HttpGet]
         public IHttpActionResult GetKeyWordId()
@@ -33,19 +35,7 @@ namespace API.Controllers
             return Ok(true);
         }
 
-        [Route("FindKeyWord"), HttpGet]
-        public IHttpActionResult FindKeyWord( string sentance)
-        {
-            for (int i = 0; i < sentance.Length; i++)
-
-            {if (sentance[i] == Smoothsurfing.Select("wordId like '%" + GetKeyWordId() + "%'"))
-                {
-
-                }
-                
-
-            }
-
-        }
+       
+        
     }
 }

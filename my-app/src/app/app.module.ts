@@ -4,7 +4,10 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AddVolunteerComponent } from './components/add-volenteer/add-volunteer.component';
 import { SearchComponent } from './components/search/search.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VeiwVideoComponent } from './components/veiw-video/veiw-video.component';
+import { RateVideoComponent } from './components/rate-video/rate-video.component';
+
 
 
 
@@ -12,12 +15,16 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     AddVolunteerComponent,
-    SearchComponent
+    SearchComponent,
+    RateVideoComponent,
+    VeiwVideoComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

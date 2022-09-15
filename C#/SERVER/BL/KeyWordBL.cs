@@ -19,5 +19,21 @@ namespace BL
                 db.SaveChanges();
             }
         }
+        public static string FindKeyWord(string sentance)
+        {
+            using (SmoothsurfingEntities db = new SmoothsurfingEntities())
+            {
+                for (int i = 0; i < sentance.Length; i++)
+
+                {
+                    if (sentance[i] == db.tbkeyword("select * from tbkeyword"))
+                    {
+                        
+                    }
+                }
+
+            }
+
+        }
     }
 }

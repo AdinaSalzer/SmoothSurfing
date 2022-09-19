@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder, FormArray } from '@angular/forms';
 
 
 @Component({
@@ -9,7 +9,16 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class SearchComponent implements OnInit {
   searchMacroForm=({})
-    constructor() { }
+  companyForm = this.fb.group({
+    companyName: new FormControl('', [Validators.required]),
+    admins: this.fb.array([])
+  })
+  constructor(private fb: FormBuilder) { 
+    
+  }
+  get admins() {
+    return this.companyForm.controls["admins"] as FormArray;
+  }
  
   ngOnInit(): void {
     this.searchMacroForm=new FormGroup({

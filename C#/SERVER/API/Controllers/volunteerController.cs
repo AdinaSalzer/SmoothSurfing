@@ -9,8 +9,8 @@ using System.Web.Http.Cors;
 
 namespace API.Controllers
 {
-    [EnableCors("*","*","*")]
-    [RoutePrefix("api/volunteer")]
+    [EnableCors("*","*","*")]//any localhost can connect to C#
+    [RoutePrefix("api/volunteer")]//the url in google
     public class VolunteerController : ApiController
 
     {
@@ -18,7 +18,7 @@ namespace API.Controllers
         [HttpGet]
         public IHttpActionResult GetVolunteer()
         {
-            return Ok("adina sara levin");
+            return Ok("adina sara salzer");
         }
 
         //[Route("getlastname")]
@@ -27,7 +27,7 @@ namespace API.Controllers
         //{
         //    return Ok("levin");
         //}
-        [Route("AddVoLunteer"),HttpPost]
+        [Route("AddVoLunteer"),HttpPost]//add the volunteer to the DB
         public IHttpActionResult AddVoLunteer(VolunteerDTO volunteer)
         {
              BL.VolunteerBL.AddVolunteer(volunteer);

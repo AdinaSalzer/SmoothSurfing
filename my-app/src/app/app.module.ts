@@ -7,6 +7,9 @@ import { SearchComponent } from './components/search/search.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VeiwVideoComponent } from './components/veiw-video/veiw-video.component';
 import { RateVideoComponent } from './components/rate-video/rate-video.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 
 
@@ -23,7 +26,7 @@ import { RateVideoComponent } from './components/rate-video/rate-video.component
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule, 
-    FormsModule
+    FormsModule, BrowserAnimationsModule
 
   ],
   providers: [],

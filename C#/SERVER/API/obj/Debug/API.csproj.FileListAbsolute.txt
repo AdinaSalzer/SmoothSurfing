@@ -81,3 +81,7 @@ C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\API\bin\System.Web.Htt
 C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\API\bin\DAL.dll
 C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\API\bin\DAL.pdb
 C:\Users\USER\Documents\פרוייקט סיום\C#\SERVER\API\bin\DAL.dll.config
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\API\obj\Debug\API.csproj.AssemblyReference.cache
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\API\obj\Debug\API.dll
+C:\Users\Adina Sara Levin\Desktop\Project SmoothSurfing\פרוייקט סיום\C#\SERVER\API\obj\Debug\API.pdb

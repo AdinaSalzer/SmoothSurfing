@@ -1,10 +1,10 @@
 
-<form [formGroup]="searchMacroForm">
+ <div  [formGroup]="searchMacroForm">
     <label for="searchMacro">Search:</label>
     <input type="text" id="searchMacro" class="form-control" formControlName="searchMacro">
-    <ul *ngIf="searchMacroForm.controls['searchMacro'].errors!=null">
-        <li *ngIf="searchMacroForm.controls['searchMacro'].errors.required!=null">required field</li>
-    </ul>
+    <!-- <ul *ngIf="searchMacroForm.controls['searchMacro'].errors!=null">
+        <li *ngIf="searchMacroForm.controls['searchMacro'].errors.required!=null">required field</li> -->
+    <!-- </ul> -->
     <input type="submit" class="btn btn-primary">
-</form>
 
+</div>

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { exit } from "nativescript-exit"
 
 @Component({
   selector: 'app-veiw-video',
@@ -15,7 +14,7 @@ export class VeiwVideoComponent implements OnInit {
       this.location.back();
     }
       public exitSmoothSurfing(): void {
-        exit(); // will close application
+       
       }
     
   ngOnInit(): void {

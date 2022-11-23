@@ -17,7 +17,7 @@ namespace DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public action()
         {
-            this.tbActionWord = new HashSet<tbActionWord>();
+            this.searches = new HashSet<search>();
         }
     
         public int id { get; set; }
@@ -26,8 +26,7 @@ namespace DAL
         public Nullable<int> macro { get; set; }
         public Nullable<int> count_fidback { get; set; }
     
-        public virtual volunteer volunteer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tbActionWord> tbActionWord { get; set; }
+        public virtual ICollection<search> searches { get; set; }
     }
 }

@@ -14,10 +14,9 @@ namespace DAL
     
     public partial class tbActionWord
     {
-        public string word_id { get; set; }
+        public int word_id { get; set; }
         public int action_id { get; set; }
     
-        public virtual action action { get; set; }
-        public virtual tbKeyWord tbKeyWord { get; set; }
+        public virtual tbKWord tbKWord { get; set; }
     }
 }

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace BL
 {
@@ -13,26 +14,32 @@ namespace BL
     {
         public static void AddKeyWord(KeyWordDTO KeyWord)
         {
-            using (SmoothsurfingEntities db = new SmoothsurfingEntities())
+            using (SmoothSurfingEntities db = new SmoothSurfingEntities())
             {
                 db.tbKeyWord.Add(CONVERTORS.TdKeyWordConvertor.ConvertTdKeyWordToDAL(KeyWord));
                 db.SaveChanges();
             }
         }
-        public static string FindKeyWord(string sentance)
+        public static List<tbKWord> GetAllKeyWords()
         {
-            using (SmoothsurfingEntities db = new SmoothsurfingEntities())
+            using (SmoothSurfingEntities db = new SmoothSurfingEntities())
             {
-                for (int i = 0; i < sentance.Length; i++)
 
-                {
-                    if (sentance[i] == db.tbkeyword("select * from tbkeyword"))
-                    {
-                        
-                    }
-                }
+
+                return db.tbKWord.Include(k=>k.actio).ToList();
 
             }
+
+        }
+
+        public static List<string> Search(string searchText)
+        {
+            var allWords = GetAllKeyWords();
+            var searchWords= searchText.Split(' ').ToList();
+            var searchKeyWords = allWords.Where(w=>searchWords.Any(s=>s==w.name));
+            //todo Change senid to macro FK
+            //return searchKeyWords.SelectMany(sk => sk.tbKeyWord).Select(w => w.sen_id.ToString()).ToList();
+            return searchKeyWords.SelectMany(sw => sw.action).Select(w => w.macro.ToString()).ToList();
 
         }
     }

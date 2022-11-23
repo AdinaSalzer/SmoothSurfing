@@ -12,9 +12,9 @@ namespace BL
     {
         public static void AddKWord(KWordDTO kWord)
         {
-            using (SmoothsurfingEntities db = new SmoothsurfingEntities())
+            using (SmoothSurfingEntities db = new SmoothSurfingEntities())
             {
-                db.tbKWord.Add(CONVERTORS.TbKWordConvertor.ConvertKWordToDAL(kWord));
+                db.tbKWords.Add(CONVERTORS.TbKWordConvertor.ConvertKWordToDAL(kWord));
                 db.SaveChanges();
             }
         }

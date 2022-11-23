@@ -14,18 +14,9 @@ namespace DAL
     
     public partial class volunteer
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public volunteer()
-        {
-            this.action = new HashSet<action>();
-        }
-    
         public int id { get; set; }
         public string name { get; set; }
         public string password { get; set; }
         public string emailAddress { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<action> action { get; set; }
     }
 }

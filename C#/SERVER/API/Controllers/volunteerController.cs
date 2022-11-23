@@ -21,18 +21,13 @@ namespace API.Controllers
             return Ok("adina sara salzer");
         }
 
-        //[Route("getlastname")]
-        //[HttpGet]
-        //public IHttpActionResult GetLestName()
-        //{
-        //    return Ok("levin");
-        //}
+       
         [Route("AddVoLunteer"),HttpPost]//add the volunteer to the DB
         public IHttpActionResult AddVoLunteer(VolunteerDTO volunteer)
         {
              BL.VolunteerBL.AddVolunteer(volunteer);
             return Ok(true);
         }
-            
+        
     }
 }

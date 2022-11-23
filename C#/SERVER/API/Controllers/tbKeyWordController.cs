@@ -34,8 +34,25 @@ namespace API.Controllers
             BL.KeyWordBL.AddKeyWord(keyWord);
             return Ok(true);
         }
-
-       
+        //userVoiceRecorder(); to ask the teacher
+        [Route("UserSearch")]
+        [HttpGet]
+        public IHttpActionResult  UserSearch(string searchText)
+        {
+            return Ok(BL.KeyWordBL.Search(searchText));
+        }
+        //UsergetKeyWord();
+        [Route("UsergetKeyWord")]
+        [HttpGet]
+        public IHttpActionResult UsergetKeyWord()
+        {
+            return Ok("456");
+        }
         
+       
+        //UserGetMacro (); ask the teacher
+        // UsertextRecorder(); to ask the teacher
+
+
     }
 }

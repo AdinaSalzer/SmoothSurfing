@@ -4,18 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0c53a87d68d547bf9e2d181e08c66164" Name="Diagram1">
-        <EntityTypeShape EntityType="SmoothsurfingModel.action" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="SmoothsurfingModel.search" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SmoothsurfingModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SmoothsurfingModel.tbActionWord" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SmoothsurfingModel.tbKeyWord" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SmoothsurfingModel.tbKWord" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SmoothsurfingModel.volunteer" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <AssociationConnector Association="SmoothsurfingModel.FK_action_volunteer" ManuallyRouted="false" />
-        <AssociationConnector Association="SmoothsurfingModel.FK_tbActionWord_action" ManuallyRouted="false" />
-        <AssociationConnector Association="SmoothsurfingModel.FK_tbKeyWord_tbActionWord" ManuallyRouted="false" />
-        <AssociationConnector Association="SmoothsurfingModel.FK_tbKeyWord_tbKWord" ManuallyRouted="false" />
+      <Diagram DiagramId="a9d3f8839cae4e27bef8afcfcf12a4e3" Name="Diagram1">
+        <EntityTypeShape EntityType="SmoothSurfingModel.action" Width="1.5" PointX="0.625" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmoothSurfingModel.search" Width="1.5" PointX="4.875" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmoothSurfingModel.tbActionWord" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmoothSurfingModel.tbKWord" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmoothSurfingModel.volunteer" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="SmoothSurfingModel.FK__search__idAction__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="SmoothSurfingModel.FK__tbActionW__word___4E88ABD4" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

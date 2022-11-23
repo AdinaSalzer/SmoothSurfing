@@ -8,8 +8,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VeiwVideoComponent } from './components/veiw-video/veiw-video.component';
 import { RateVideoComponent } from './components/rate-video/rate-video.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
+import { ErrorComponent } from './components/error/error.component';
+import { MaterialExampleModule } from './material.module';
 
-
+const routes: Routes = [
+  {path:'home', component:SearchComponent}, 
+  {path: 'search', component:SearchComponent},
+  {path:'',redirectTo:'home', pathMatch:'full'}, 
+  {path: 'add-volunteer', component:AddVolunteerComponent},
+  {path: 'rate-video', component:RateVideoComponent},
+  {path: 'veiw-video', component:VeiwVideoComponent},
+  {path:'**', component:ErrorComponent} //always has to be last
+  ];
 
 
 
@@ -20,13 +31,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AddVolunteerComponent,
     SearchComponent,
     RateVideoComponent,
-    VeiwVideoComponent
+    VeiwVideoComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes),
     HttpClientModule,
     ReactiveFormsModule, 
-    FormsModule, BrowserAnimationsModule
+    FormsModule, 
+    BrowserAnimationsModule,
+    MaterialExampleModule
 
   ],
   providers: [],

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder, FormArray } from '@angular/forms';
+import{VoiceRecognitionService} from '../../shared/services/voice-recorder.service'
 
 
 @Component({
@@ -8,12 +9,14 @@ import { FormGroup, FormControl, Validators, FormBuilder, FormArray } from '@ang
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-  searchMacroForm=({})
+  searchMacroForm!:FormGroup
   companyForm = this.fb.group({
     companyName: new FormControl('', [Validators.required]),
     admins: this.fb.array([])
+
+    
   })
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder,private voiceRecognitionService : VoiceRecognitionService) { 
     
   }
   get admins() {
@@ -24,6 +27,18 @@ export class SearchComponent implements OnInit {
     this.searchMacroForm=new FormGroup({
       searchMacro:new FormControl('',Validators.required), 
     })
+    this.voiceRecognitionService.init()
+
   }
+   recordingInProgress=-1;
+  start(): void{
+    this.recordingInProgress*=-1;
+   if(this.recordingInProgress>0)
+     this.voiceRecognitionService.start();
+    else 
+     this.voiceRecognitionService.stop();
+  }
+
+  
 
 }

@@ -17,13 +17,13 @@ namespace DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tbKWord()
         {
-            this.tbKeyWord = new HashSet<tbKeyWord>();
+            this.tbActionWords = new HashSet<tbActionWord>();
         }
     
-        public string KeyWordId { get; set; }
+        public int KeyWordId { get; set; }
         public string name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tbKeyWord> tbKeyWord { get; set; }
+        public virtual ICollection<tbActionWord> tbActionWords { get; set; }
     }
 }

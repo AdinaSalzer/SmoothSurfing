@@ -15,7 +15,10 @@ namespace DAL
     public partial class search
     {
         public int id { get; set; }
-        public int idAction { get; set; }
-        public string dit { get; set; }
+        public Nullable<int> idAction { get; set; }
+        public Nullable<bool> isSuccessful { get; set; }
+        public string textSearch { get; set; }
+    
+        public virtual action action { get; set; }
     }
 }

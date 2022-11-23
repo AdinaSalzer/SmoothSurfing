@@ -12,7 +12,7 @@ namespace BL
     {//try git
         public static void AddVolunteer(VolunteerDTO volunteer)
         {
-        using (SmoothsurfingEntities db = new SmoothsurfingEntities())
+        using (SmoothSurfingEntities db = new SmoothSurfingEntities())
             {
                 db.volunteer.Add(CONVERTORS.VolunteerConvertor.ConvertVolunteerToDAL(volunteer));
                 db.SaveChanges();

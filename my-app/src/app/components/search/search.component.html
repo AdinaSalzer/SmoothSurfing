@@ -1,10 +1,14 @@
 
  <div  [formGroup]="searchMacroForm">
-    <label for="searchMacro">Search:</label>
-    <input type="text" id="searchMacro" class="form-control" formControlName="searchMacro">
-    <!-- <ul *ngIf="searchMacroForm.controls['searchMacro'].errors!=null">
-        <li *ngIf="searchMacroForm.controls['searchMacro'].errors.required!=null">required field</li> -->
-    <!-- </ul> -->
-    <input type="submit" class="btn btn-primary">
-
+   <label for="site-search">Search the site:</label>
+   <input type="search"  name="q" id="searchMacro" class="form-control" formControlName="searchMacro">
+   
+   <button (click)="start()">Search</button>
+   
+    <ul *ngIf="searchMacroForm.controls['searchMacro'].errors!=null"> 
+        <li *ngIf="searchMacroForm.controls['searchMacro'].errors['required']!=null">required field</li> 
+     </ul> 
+     
+   
+     
 </div>
